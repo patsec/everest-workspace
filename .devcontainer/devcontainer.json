@@ -1,0 +1,35 @@
+{
+  "name": "EVerest",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+
+  "runArgs": [
+    "--security-opt", "seccomp=unconfined" // needed for debug support
+  ],
+
+  "mounts": [],
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "path": "/bin/bash"
+          }
+        },
+
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+
+      "extensions": [
+        "ms-python.python",
+        "ms-vscode.cpptools",
+        "ms-vsliveshare.vsliveshare-pack"
+      ]
+    }
+  },
+
+  "remoteUser": "vscode"
+}

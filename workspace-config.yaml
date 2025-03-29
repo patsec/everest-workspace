@@ -1,0 +1,66 @@
+Josev:
+  cmake_condition: EVEREST_ENABLE_PY_SUPPORT AND EVEREST_DEPENDENCY_ENABLED_JOSEV
+  git: https://github.com/patsec/ext-switchev-iso15118.git
+  git_tag: pydantic
+everest-cmake:
+  git: https://github.com/EVerest/everest-cmake.git
+  git_tag: v0.5.0
+everest-core:
+  git: https://github.com/patsec/everest-core.git
+  git_tag: sil-separate
+everest-dev-environment:
+  git: https://github.com/EVerest/everest-dev-environment.git
+  git_tag: v0.7.1
+everest-framework:
+  git: https://github.com/EVerest/everest-framework.git
+  git_tag: v0.19.1
+  options:
+  - BUILD_TESTING OFF
+  - everest-framework_USE_PYTHON_VENV ${PROJECT_NAME}_USE_PYTHON_VENV
+  - everest-framework_USE_PYTHON_VENV_PATH ${PROJECT_NAME}_USE_PYTHON_VENV_PATH
+everest-utils:
+  git: https://github.com/EVerest/everest-utils.git
+  git_tag: v0.4.3
+ext-mbedtls:
+  cmake_condition: EVEREST_DEPENDENCY_ENABLED_MBEDTLS
+  git: https://github.com/EVerest/ext-mbedtls.git
+  git_tag: 8b3f26a5ac38d4fdccbc5c5366229f3e01dafcc0
+  options:
+  - ENABLE_PROGRAMS OFF
+  - ENABLE_TESTING OFF
+  - MBEDTLS_FATAL_WARNINGS OFF
+libcbv2g:
+  cmake_condition: EVEREST_DEPENDENCY_ENABLED_LIBCBV2G
+  git: https://github.com/EVerest/libcbv2g.git
+  git_tag: v0.2.1
+libevse-security:
+  cmake_condition: EVEREST_DEPENDENCY_ENABLED_LIBEVSE_SECURITY
+  git: https://github.com/EVerest/libevse-security.git
+  git_tag: v0.9.2
+libfsm:
+  cmake_condition: EVEREST_DEPENDENCY_ENABLED_LIBFSM
+  git: https://github.com/EVerest/libfsm.git
+  git_tag: v0.2.0
+libiso15118:
+  cmake_condition: EVEREST_DEPENDENCY_ENABLED_LIBISO15118
+  git: https://github.com/EVerest/libiso15118.git
+  git_tag: v0.3.0
+liblog:
+  git: https://github.com/EVerest/liblog.git
+  git_tag: v0.2.2
+  options:
+  - BUILD_EXAMPLES OFF
+libocpp:
+  cmake_condition: EVEREST_DEPENDENCY_ENABLED_LIBOCPP
+  git: https://github.com/EVerest/libocpp.git
+  git_tag: v0.22.0
+libslac:
+  cmake_condition: EVEREST_DEPENDENCY_ENABLED_LIBSLAC
+  git: https://github.com/EVerest/libslac.git
+  git_tag: v0.3.0
+libtimer:
+  cmake_condition: EVEREST_DEPENDENCY_ENABLED_LIBTIMER
+  git: https://github.com/EVerest/libtimer.git
+  git_tag: v0.1.1
+  options:
+  - BUILD_EXAMPLES OFF
