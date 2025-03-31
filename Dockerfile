@@ -17,7 +17,7 @@ RUN python3 -m pip install --no-cache-dir --break-system-packages \
 
 WORKDIR /opt/everest
 
-COPY workspace-config.yaml .
+COPY workspace-config.yaml workspace-config.yaml
 
 RUN edm init --workspace . --config workspace-config.yaml
 RUN CMAKE_PREFIX_PATH=/opt/everest cmake -S everest-core -B everest-core/build --install-prefix /usr/local
